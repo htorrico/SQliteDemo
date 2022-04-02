@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SQliteDemo.MainPage">
+
+    <StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Nombre Artista"/>
+            <Entry x:Name="txtNombre" WidthRequest="100"></Entry>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+
+            <Label Text="Nombre Artista"/>
+            <Entry x:Name="txtNombre2" WidthRequest="100"></Entry>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Nombre Artista"/>
+            <Entry x:Name="txtNombre3" WidthRequest="100"></Entry>
+        </StackLayout>
+        
+        
+        
+        <Button Text="Grabar"   Clicked="Button_Clicked" />
+        <Button Text="GrabarGrupal"   Clicked="Button_Clicked_3" />
+        <Button Text="Listar" Clicked="Button_Clicked_1"/>
+        <ListView x:Name="lvArtistas">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <!--<Label Text="{Binding Nombre}"></Label>-->
+                    <TextCell Text="{Binding Nombre}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Label Text="Filtro"/>
+        <Entry x:Name="txtFiltro"></Entry>
+        <Button Text="Buscar" Clicked="Button_Clicked_2"/>
+        <ListView x:Name="lvArtistasFiltrado">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <!--<Label Text="{Binding Nombre}"></Label>-->
+                    <TextCell Text="{Binding Nombre}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>
